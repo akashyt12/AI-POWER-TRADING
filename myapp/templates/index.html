@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Color Predictor - Cyber UI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 AI Color Predictor</h1>
+
+    <!-- Prediction Box -->
+    <div class="prediction-box" id="prediction-box">
+      <h2>Next Prediction</h2>
+      <p id="predicted-number">--</p>
+      <p id="predicted-color">--</p>
+      <div id="confidence-bar-container">
+        <div id="confidence-bar"></div>
+      </div>
+      <p id="predicted-confidence">--</p>
+    </div>
+
+    <!-- Trend Chart -->
+    <h2>Prediction Trend</h2>
+    <canvas id="trend-chart" height="150"></canvas>
+
+    <!-- History Table -->
+    <h2>Recent History</h2>
+    <table id="history-table">
+      <thead>
+        <tr><th>#</th><th>Number</th><th>Color</th><th>Big/Small</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
